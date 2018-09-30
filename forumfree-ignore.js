@@ -1,6 +1,5 @@
 /*
 *	TODO:
-*	- ignore user from topic list in sections/homepage
 *	- ignore likes from ignored users
 */
 
@@ -19,7 +18,7 @@ async function ignoreUsers() {
     /* --- fetch the ignore list                               --- */
     /* ----------------------------------------------------------- */
     
-    const result = await /*fetch("https://"+document.domain+"/?act=Msg&CODE=02");*/ fetch("list.html");
+    const result = await fetch("https://"+document.domain+"/?act=Msg&CODE=02");
     // set timeout otherwise text() fails/hangs
     setTimeout(() => null, 0);
     const data = await result.text();
